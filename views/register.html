@@ -25,64 +25,76 @@
   <![endif]-->
 
     <section class="section">
-        <div class="columns">
-            <div class="column is-4 is-offset-4">
-                <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="What does the world call you?">
+        <form id="registerForm">
+            <div class="columns">
+                <div class="column is-4 is-offset-4">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input name="name" class="input" type="text" placeholder="What does the world call you?">
+                        </div>
                     </div>
-                </div>
-                
-                <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="john@appleseed.com">
-                        <span class="icon is-small is-left">
-                            <i class="fa fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="fa fa-warning"></i>
-                        </span>
+                    
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="john@appleseed.com">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fa fa-warning"></i>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="field">
-                    <label class="label">Gender</label>
-                    <div class="control">
-                        <div class="select">
-                            <select name="gender">
-                                <option>Select</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                            </select>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input type="password" class="input" placeholder="Password" name="password">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-key"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Gender</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="gender">
+                                    <option>Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox"> I agree to the
+                                <a href="#">terms and conditions</a>
+                            </label>
+                        </div>
+                    </div> -->
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button id="registerBtn" class="button is-success">Submit</button>
                         </div>
                     </div>
                 </div>
-                <div class="field">
-                    <div class="control">
-                        <label class="checkbox">
-                            <input type="checkbox"> I agree to the
-                            <a href="#">terms and conditions</a>
-                        </label>
-                    </div>
-                </div>
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button class="button is-link">Submit</button>
-                    </div>
-                </div>
             </div>
-        </div>
+        </form>
     </section>
 
 
     <!-- Add your site or application content here -->
-    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="../js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/register.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
