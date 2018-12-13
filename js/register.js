@@ -9,10 +9,13 @@ $(document).ready(function() {
     }
 
     submitBtn.click(function(e) {
+        let registration;
         e.preventDefault();
+
         inputs.each(function() {
-            
+            registration[$(this).attr('name')] = $(this).val();            
         })
+        //console.log(registration);
     });
 
 });
