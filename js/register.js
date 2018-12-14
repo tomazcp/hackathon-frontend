@@ -17,10 +17,20 @@ $(document).ready(function() {
     });
 
     function submitForm(data) {
-        $.post(registrationUrl, data, function(result) {
-            console.log(result);
-        });    
-    }
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            'type': 'POST',
+            'url': registrationUrl,
+            'data': JSON.stringify(data),
+            'dataType': 'json',
+            'success': function(res) {
+                console.log(res);
+            }
+        });
+    } 
 
     
 
