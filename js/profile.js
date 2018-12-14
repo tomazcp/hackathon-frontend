@@ -11,7 +11,7 @@ $(document).ready(function() {
     const formDiv = $('.form');
     const inputs = $('#editProfile :input').not('#editBtn');
     const avatars = { male: '../img/male_avatar.png', female: '../img/female_avatar.png' };
-    const editUrl = 'http://192.168.1.29:8080/hackathon/api/patient/register';
+    const editUrl = 'http://192.168.1.29:8080/hackathon/api/patients/register';
     
     function getPatient(callback) {
         $.ajax({
