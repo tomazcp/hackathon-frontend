@@ -11,13 +11,14 @@
   <link rel="manifest" href="../site.webmanifest">
   <link rel="apple-touch-icon" href="../icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css"> -->
 
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/profile.css">
 
 </head>
 
@@ -28,9 +29,10 @@
   <!-- Add your site or application content here -->
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
     <div class="navbar-brand">
         <a class="navbar-item" href="home.html">
-          <img src="../img/logo.png" width="30" height="28">
+          <img class="logo" src="../img/logo.png">
         </a>
     
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -75,11 +77,71 @@
           </div>
         </div>
       </div>
+    </div>
     </nav>
 
     <div class="section">
         <div class="container">
-            <h1>Profile</h1>
+            <div class="columns">
+                <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
+                    <p class="menu-label is-hidden-touch">Navigation</p>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="edit_profile.html" class="">
+                                <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span> 
+                                Edit Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span> 
+                                Schedule Appointment
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span> 
+                                View Appointments
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+                <section class="column section is-5 is-offset-1">
+                    <!-- <figure class="image is-128x128">
+                        <img class="is-rounded" src="../img/female_avatar.png">
+                    </figure> -->
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img class="avatar" src="" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <span>
+                                        <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
+                                    </span>
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="patient-name is-3"><strong></strong></p>
+                                <p class="patient-email is-3"></p>
+                            </div>
+                            </div>
+                        
+                            <!-- <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div> -->
+                        </div>
+                        </div>
+                </section>
+            </div>
         </div>
     </div>
 

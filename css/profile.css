@@ -1,0 +1,8 @@
+.navbar-item img {
+    max-height: 3rem !important;
+}
+
+figure > .avatar {
+    max-width: 90%;
+    margin-left: 20px;
+}
