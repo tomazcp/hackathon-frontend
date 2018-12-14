@@ -87,13 +87,19 @@
                     <p class="menu-label is-hidden-touch">Navigation</p>
                     <ul class="menu-list">
                         <li>
-                            <a href="edit_profile.html" class="">
+                            <a href="#" class="sidenav-profile">
+                                <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span> 
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidenav-edit">
                                 <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span> 
                                 Edit Profile
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="appointment.html">
                                 <span class="icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span> 
                                 Schedule Appointment
                             </a>
@@ -110,36 +116,50 @@
                     <!-- <figure class="image is-128x128">
                         <img class="is-rounded" src="../img/female_avatar.png">
                     </figure> -->
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img class="avatar" src="" alt="Placeholder image">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <span>
-                                        <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
-                                    </span>
+                    <div class="profile">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img class="avatar" src="" alt="Placeholder image">
                                 </figure>
                             </div>
-                            <div class="media-content">
-                                <p class="patient-name is-3"><strong></strong></p>
-                                <p class="patient-email is-3"></p>
-                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <span>
+                                            <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
+                                        </span>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="patient-name is-3"><strong></strong></p>
+                                    <p class="patient-email is-3"></p>
+                                </div>
                             </div>
                         
-                            <!-- <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                <a href="#">#css</a> <a href="#">#responsive</a>
-                                <br>
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div> -->
+                            </div>
                         </div>
-                        </div>
+                    </div>
+                    <div class="form">
+                        <h2 class="title">Edit Profile</h2>
+                        <form id="editProfile">
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <div class="control">
+                                    <input name="name" class="input" type="text" placeholder="Full name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control">
+                                    <input name="email" type="email" class="input" placeholder="example@email.com">
+                                </div>
+                            </div>
+                            <input type="hidden" name="id">
+                            <button id="editBtn" class="button is-primary">Submit</button>
+                        </form>
+                    </div>
                 </section>
             </div>
         </div>
