@@ -13,8 +13,10 @@ $(document).ready(function() {
             registration[this.name] = $(this).val();            
         });
         
-        submitForm(registration, function(res) {
-            console.log(res);
+        submitForm(registration, function(res, status) {
+            if (status === 'success') {
+                window.location.href = '../views/login.html';
+            }
         });
     });
 
