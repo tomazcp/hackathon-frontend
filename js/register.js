@@ -15,7 +15,7 @@ $(document).ready(function() {
         
         submitForm(registration, function(res, status) {
             if (status === 'success') {
-                window.location.href = '../views/login.html';
+                window.location.href = '../views/profile.html';
             }
         });
     });
