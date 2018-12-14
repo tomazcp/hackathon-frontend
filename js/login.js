@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    const loginUrl = 'http://192.168.1.29:8080/hackathon/api/auth/login';
+    const loginUrl = 'http://localhost:8080/hackathon/api/auth/login';
     const loginBtn = $('#loginBtn');
     const inputs = $('#loginForm :input').not('button');
     

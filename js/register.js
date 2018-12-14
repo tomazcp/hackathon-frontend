@@ -3,7 +3,7 @@ $(document).ready(function() {
     const registerForm = $('#registerForm');
     const submitBtn = $('#registerBtn');
     const inputs = $('#registerForm :input').not('#registerBtn');
-    const registrationUrl = "http://192.168.1.29:8080/hackathon/api/auth/register";
+    const registrationUrl = "http://localhost:8080/hackathon/api/auth/register";
 
     submitBtn.click(function(e) {
         e.preventDefault();

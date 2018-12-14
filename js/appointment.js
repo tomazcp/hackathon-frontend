@@ -5,7 +5,7 @@ $(document).ready(function() {
     const $alertMessageContainer = $(".event-alert-message");
     const timeout = 10000;
     const dateTimeFormat = "YYYY-MM-DD HH:mm:ss";
-    const baseUrl = 'http://192.168.1.29:8080/hackathon/api/';
+    const baseUrl = 'http://localhost:8080/hackathon/api/';
     const createAppointmentUrl = baseUrl + 'appointment/add';
     const fetchAppointmentsUrl = 'appointment/list';
     const patientUrl = baseUrl + 'auth/profile';

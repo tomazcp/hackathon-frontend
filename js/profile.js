@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    const patientUrl = 'http://192.168.1.29:8080/hackathon/api/auth/profile';
+    const patientUrl = 'http://localhost:8080/hackathon/api/auth/profile';
     const imgAvatar = $('img.avatar');
     const nameTag = $('p.patient-name');
     const emailTag = $('p.patient-email');
@@ -11,7 +11,7 @@ $(document).ready(function() {
     const formDiv = $('.form');
     const inputs = $('#editProfile :input').not('#editBtn');
     const avatars = { male: '../img/male_avatar.png', female: '../img/female_avatar.png' };
-    const editUrl = 'http://192.168.1.29:8080/hackathon/api/patient/';
+    const editUrl = 'http://localhost:8080/hackathon/api/patient/';
     
     function getPatient(callback) {
         $.ajax({
