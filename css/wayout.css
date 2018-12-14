@@ -1,0 +1,52 @@
+#leaving {
+    background-image: url("../img/goodbye.png");
+    object-fit: cover;
+    object-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.bg-img { 
+    background-image: url(demo.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: #999;
+
+}
+
+#message {
+    align-self: center;
+}
+
+
+.img-responsive {
+  object-fit: cover;
+  object-position: center; 
+  width:1920px; 
+    height: auto;
+    z-index: -1;
+  
+  background-size:  cover;
+
+} 
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    color: coral;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
