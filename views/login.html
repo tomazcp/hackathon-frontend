@@ -36,25 +36,19 @@
                     <figure class="avatar">
                         <img src="https://placehold.it/128x128">
                     </figure>
-                    <form>
+                    <form id="loginForm">
                         <div class="field">
                             <div class="control">
-                                <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                                <input name="email" class="input is-large" type="email" placeholder="Your Email" autofocus="">
                             </div>
                         </div>
 
                         <div class="field">
                             <div class="control">
-                                <input class="input is-large" type="password" placeholder="Your Password">
+                                <input name="password" class="input is-large" type="password" placeholder="Your Password">
                             </div>
                         </div>
-                        <div class="field">
-                            <label class="checkbox">
-              <input type="checkbox">
-              Remember me
-            </label>
-                        </div>
-                        <button class="button is-block is-primary is-large is-fullwidth">Login</button>
+                        <button id="loginBtn" class="button is-block is-primary is-large is-fullwidth">Login</button>
                     </form>
                 </div>
                 <p class="has-text-grey">
@@ -70,7 +64,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="../js/plugins.js"></script>
-  <script src="../js/register.js"></script>
+  <script src="../js/login.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
