@@ -14,7 +14,7 @@ $(document).ready(function() {
         });
 
         doLogin(login, function(res) {
-            console.log(res);
+            window.location.href = '../views/profile.html';
         })
     })
 
