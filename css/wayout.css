@@ -37,6 +37,9 @@
 .container {
     position: relative;
     text-align: center;
+    width:1920px; 
+    padding: 80px;
+    height: auto; 
     color: white;
   }
   
@@ -45,8 +48,11 @@
   /* Centered text */
   .centered {
     position: absolute;
-    color: coral;
+    font-size: x-large;
+    font-family: cursive;
+    color: black;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+   
   }
