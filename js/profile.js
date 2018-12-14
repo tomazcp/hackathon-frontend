@@ -11,7 +11,7 @@ $(document).ready(function() {
     const formDiv = $('.form');
     const inputs = $('#editProfile :input').not('#editBtn');
     const avatars = { male: '../img/male_avatar.png', female: '../img/female_avatar.png' };
-    const editUrl = 'http://192.168.1.29:8080/hackathon/api/patients/register';
+    const editUrl = 'http://192.168.1.29:8080/hackathon/api/patient/';
     
     function getPatient(callback) {
         $.ajax({
@@ -33,8 +33,8 @@ $(document).ready(function() {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            url: editUrl,
-            type: 'POST',
+            url: editUrl + data.id,
+            type: 'PUT',
             async: true,
             dataType: 'json',
             data: JSON.stringify(data),
@@ -51,7 +51,6 @@ $(document).ready(function() {
     }
 
     function populateForm(patient) {
-        console.log(patient);
         inputs.each(function() {
             this.value = patient[this.name];
         });      
@@ -63,9 +62,14 @@ $(document).ready(function() {
 
         inputs.each(function() {
             form[$(this).attr('name')] = $(this).val();
+            console.log($(this).attr('name'));
         });
 
-        submitForm(form);
+        submitForm(form, function(data) {
+            inputs.each(function() {
+                populateForm(data);
+            })
+        });
     });
 
     sidenavEdit.click(function(e) {
