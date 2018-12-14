@@ -48,6 +48,7 @@ $(document).ready(function() {
         emailTag.text(patient.email);
         populateForm(patient);
         formDiv.hide();
+        profile.show();
     }
 
     function populateForm(patient) {
@@ -68,7 +69,8 @@ $(document).ready(function() {
         submitForm(form, function(data) {
             inputs.each(function() {
                 populateForm(data);
-            })
+            });
+            onData(data);
         });
     });
 
