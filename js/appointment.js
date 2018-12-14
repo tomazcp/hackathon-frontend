@@ -5,7 +5,23 @@ $(document).ready(function() {
     const $alertMessageContainer = $(".event-alert-message");
     const timeout = 10000;
     const dateTimeFormat = "YYYY-MM-DD HH:mm:ss";
-    const createAppointmentUrl = 'http://192.168.1.239:8080/hackathon/api/'
+    const baseUrl = 'http://192.168.1.239:8080/hackathon/api/';
+    const createAppointmentUrl = baseUrl + 'appointment/add';
+    const patientUrl = baseUrl + 'auth/profile';
+
+    function fetchPatient(callback) {
+        $.ajax({
+            headears: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: patientUrl,
+            async: true,
+            type: 'GET',
+            dataType: 'json',
+            success: callback
+        });
+    }
 
     $calendar.fullCalendar({
         header: {
@@ -45,8 +61,8 @@ $(document).ready(function() {
             })
         },
         select: function (start, end, jsEvent, view) {
-            
-            const title = prompt("Event name:");
+            fetchPatient(function(data) {
+                const title = prompt("Event name:");
             const eventStart = moment(start).format(dateTimeFormat);
             const eventEnd = moment(end).format(dateTimeFormat);
             let event = {};
@@ -54,8 +70,8 @@ $(document).ready(function() {
             if (title) {
                 event = { title, start: eventStart, end: eventEnd };
                 $calendar.fullCalendar("renderEvent", event, false); // make the event stick false
-
-                $.post(``, event)
+                
+                $.post(createAppointmentUrl, event)
                     .done(response => {
                         let alertMessage = JSON.parse(response);
                         
@@ -67,7 +83,8 @@ $(document).ready(function() {
 
                     });
             }
-            return;
+                return;
+            });
         },
         eventResize: function({ end, id }, { _milliseconds }, revertFunc, jsEvent, ui, view) {
             const newEventEnd = moment(end).format(dateTimeFormat);
